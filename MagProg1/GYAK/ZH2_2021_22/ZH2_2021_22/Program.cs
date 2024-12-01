@@ -122,7 +122,7 @@ namespace ZH2_2021_22
                 else if (!film.Feliratos)
                 {
                     Console.WriteLine("{0} - {1} ({2})", film.Rendezo, film.Cim, film.Feliratos ? "feliratos" : "szinkronos");
-                     
+
                 }
             }
 
@@ -143,9 +143,9 @@ namespace ZH2_2021_22
                 double maxIMDBPontszam = double.MinValue;
                 foreach (Film film in filmek)
                 {
-                    if (film.PremierDatum<DateTime.Now && film.Kategoria.Contains(kategoria))
+                    if (film.PremierDatum < DateTime.Now && film.Kategoria.Contains(kategoria))
                     {
-                        if (maxIMDBPontszam<film.IMDBErtekeles)
+                        if (maxIMDBPontszam < film.IMDBErtekeles)
                         {
                             maxIMDBPontszam = film.IMDBErtekeles;
                         }
