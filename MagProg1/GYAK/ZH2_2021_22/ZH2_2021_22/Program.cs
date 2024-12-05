@@ -44,18 +44,20 @@ namespace ZH2_2021_22
 
             Console.Write("Adja meg a kedvenc rendezőjének a nevét: ");
             string rendezo = Console.ReadLine();
-            bool vanKedvencRendezotolFilm = false;
-            foreach (Film film in filmek)
-            {
-                if (film.Rendezo == rendezo)
-                {
-                    Console.WriteLine("Film címe: {0}, megjelenés éve: {1}", film.Cim, film.PremierDatum.Year);
-                    vanKedvencRendezotolFilm = true;
-                }
-            }
+            bool vanKedvencRendezotolFilm = VanAdottRendezonekFilmje(filmek, rendezo);
             if (!vanKedvencRendezotolFilm)
             {
                 Console.WriteLine("Nincs ettől a rendezőtől film!");
+            }
+            else
+            {
+                foreach (Film film in filmek)
+                {
+                    if (film.Rendezo == rendezo)
+                    {
+                        Console.WriteLine("Film címe: {0}, megjelenés éve: {1}", film.Cim, film.PremierDatum.Year);
+                    }
+                }
             }
 
             List<Film> valogatottFilmek = new List<Film>();
@@ -140,18 +142,18 @@ namespace ZH2_2021_22
 
             foreach (string kategoria in mindenKategoria)
             {
-                double maxIMDBPontszam = double.MinValue;
+                Film maxIMDBFilm = new Film();
                 foreach (Film film in filmek)
                 {
                     if (film.PremierDatum < DateTime.Now && film.Kategoria.Contains(kategoria))
                     {
-                        if (maxIMDBPontszam < film.IMDBErtekeles)
+                        if (maxIMDBFilm.IMDBErtekeles < film.IMDBErtekeles)
                         {
-                            maxIMDBPontszam = film.IMDBErtekeles;
+                            maxIMDBFilm = film;
                         }
                     }
                 }
-                Console.WriteLine("Kategória: {0}, max IMDB értékelés: {1}", kategoria, maxIMDBPontszam);
+                Console.WriteLine("Kategória: {0}, max IMDB értékelés: {1}, film: {2}", kategoria, maxIMDBFilm.IMDBErtekeles, maxIMDBFilm.Cim);
             }
             Console.ReadLine();
         }
