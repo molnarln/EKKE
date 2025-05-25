@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaztartasiGepek", "HaztartasiGepek\HaztartasiGepek.csproj", "{FBBF8FA8-9952-409E-9383-07EC91CE4C59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoProgram", "FoProgram\FoProgram.csproj", "{1078B1AC-9C6A-4E38-A372-354426156C07}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBBF8FA8-9952-409E-9383-07EC91CE4C59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBBF8FA8-9952-409E-9383-07EC91CE4C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBBF8FA8-9952-409E-9383-07EC91CE4C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBF8FA8-9952-409E-9383-07EC91CE4C59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1078B1AC-9C6A-4E38-A372-354426156C07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1078B1AC-9C6A-4E38-A372-354426156C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1078B1AC-9C6A-4E38-A372-354426156C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1078B1AC-9C6A-4E38-A372-354426156C07}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {900F8A06-B0D8-4882-A4EC-115EBFF2AA5B}
+	EndGlobalSection
+EndGlobal
